@@ -1,0 +1,664 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>高三二班</title>
+    <link rel="icon" href="https://www.zs114.cn/upfile/202010/20201013151703889065.jpg" type="image/jpeg">
+     <style>
+      
+        .data-table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            background-color: #f8f9fa;
+        }
+        .data-table th {
+            background-color: #f8f9fa;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid #dee2e6;
+        }
+        .data-table td {
+            padding: 10px;
+            border-bottom: 1px solid #dee2e6;
+            background-color: #f8f9fa;
+        }
+        .data-table tr:hover {
+            background-color: #f1f3f5;
+        }
+        .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: #f8f9fa;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropdown-content {
+  display: none; /* 默认隐藏下拉内容 */
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* 鼠标悬停时显示下拉内容 */
+}
+
+a {
+      text-decoration: none; /* 去掉下划线 */
+      color: black; /* 可选：设置链接颜色 */
+    }
+    a:hover {
+      text-decoration: underline; /* 可选：鼠标悬停时添加下划线 */
+    }
+
+    body{
+      
+      height: 100vh; /* 视口高度 */
+      background-image: url("http://127.0.0.1:5000/data/bg.jpg");  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    text-align: center;
+    padding: 100px;
+    background-attachment: fixed;}
+  
+    </style>
+</head>
+<body>
+    <table class="data-table">
+        <thead>
+ 
+            <tr>
+                <td><h3>姓名</h3></td>
+                <td><h3>目标学校</h3></td>
+                <td><h3>想要去的城市</h3></td>
+                <td><h3>目标分数</h3></td>
+                <td><h3>目标分数于2024年排名</h3></td>
+                <td><h3>人生格言</h3></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>谭景瀚</td>
+                <td>
+                <div class="dropdown">
+  <button class="dropdown-button" onclick="toggleDropdown()">四川大学</button>
+  <div id="dropdownContent" class="dropdown-content">
+    <a href="https://www.scu.edu.cn/">大学官网</a>
+    <a href="https://zs.scu.edu.cn/list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1105">2024第一批录取分数线</a>
+  </div>
+</div></td>
+                <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=四川'>四川</a></td>
+                <td >570+</td>
+                <td>17043-17424</td>
+                <td> 百日开门战，一刀双弹有，优势在我！</td>
+            </tr>
+            <tr>
+              <td>黄朝艳</td>
+              <td>
+              <div class="dropdown">
+<button class="dropdown-button" onclick="toggleDropdown()">贵州大学</button>
+<div id="dropdownContent" class="dropdown-content">
+  <a href="https://www.gzu.edu.cn/">大学官网</a>
+  <a href="https://rso.gzu.edu.cn/2024/0930/c17371a238255/page.htm">2024第一批录取分数线</a>
+</div>
+</div></td>
+              <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=内蒙古'>内蒙古</a>/
+                <a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=海南'>海南</a></td>
+              <td >550+</td>
+              <td>-</td>
+              <td>业精于勤，荒于嬉</td>
+          </tr>
+          <tr>
+            <td>胡瑜</td>
+            <td>
+            <div class="dropdown">
+<button class="dropdown-button" onclick="toggleDropdown()">遵义医科大学</button>
+<div id="dropdownContent" class="dropdown-content">
+<a href="https://www.zmu.edu.cn/">大学官网</a>
+<a href="https://zyzb.zmu.edu.cn/Axzdoc2/%E8%B4%B5%E5%B7%9E/index_1.html">2024第一批录取分数线</a>
+</div>
+</div></td>
+            <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=武汉'>武汉</a></td>
+            <td >587+</td>
+            <td>-</td>
+            <td>遥知不是雪，唯有暗香来</td>
+        </tr>
+        <tr>
+          <td>康福敏</td>
+          <td>
+          <div class="dropdown">
+<button class="dropdown-button" onclick="toggleDropdown()">南京大学</button>
+<div id="dropdownContent" class="dropdown-content">
+<a href="https://www.nju.edu.cn/">大学官网</a>
+<a href="https://bkzs.nju.edu.cn/static/front/nju/basic/html_web/lnfs.html">2024第一批录取分数线</a>
+</div>
+</div>/
+<div class="dropdown">
+  <button class="dropdown-button" onclick="toggleDropdown()">武汉大学</button>
+  <div id="dropdownContent" class="dropdown-content">
+  <a href="https://www.whu.edu.cn/">大学官网</a>
+  <a href="http://zsdata.whu.edu.cn/public/wzgl/#/fscx">2024第一批录取分数线</a>
+  </div>
+  </div></td>
+          <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=武汉'>武汉</a>/
+            <a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=南京'>南京</a>
+          </td>
+          <td >600+</td>
+          <td>-</td>
+          <td>他山之石，可以攻玉</td>
+      </tr>
+      <tr>
+        <td>黄小慢</td>
+        <td>
+        <div class="dropdown">
+<button class="dropdown-button" onclick="toggleDropdown()">哈尔滨工业大学</button>
+<div id="dropdownContent" class="dropdown-content">
+<a href="https://www.hit.edu.cn">大学官网</a>
+<a href="https://zsb.hit.edu.cn/information/score">2024第一批录取分数线</a>
+</div>
+</div></td>
+        <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=新疆'>新疆</a></td>
+        <td >550</td>
+        <td>-</td>
+        <td>志之所趋，无远勿届，穷山距海，不能限也</td>
+    </tr>
+    <tr>
+      <td>刘薰薰</td>
+      <td>
+      <div class="dropdown">
+<button class="dropdown-button" onclick="toggleDropdown()">西南大学</button>
+<div id="dropdownContent" class="dropdown-content">
+<a href="https://www.swu.edu.cn">大学官网</a>
+<a href="https://bkzswu.swu.edu.cn/static/front/admission?#/data-export/open-score-page2">2024第一批录取分数线</a>
+</div>
+</div></td>
+      <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=哈尔滨'>哈尔滨</a></td>
+      <td >600</td>
+      <td>-</td>
+      <td>少年不惧岁月长，彼光尚有荣光在</td>
+  </tr>
+  <tr>
+    <td>岑凯馨</td>
+    <td>
+    <div class="dropdown">
+      <button class="dropdown-button" onclick="toggleDropdown()">遵义医科大学</button>
+      <div id="dropdownContent" class="dropdown-content">
+      <a href="https://www.zmu.edu.cn/">大学官网</a>
+      <a href="https://zyzb.zmu.edu.cn/Axzdoc2/%E8%B4%B5%E5%B7%9E/index_1.html">2024第一批录取分数线</a>
+      </div>
+    </div></td>
+    <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=重庆'>重庆</a></td>
+    <td >580</td>
+    <td>-</td>
+    <td>花会沿路盛开，我们的未来也一样</td>
+</tr>
+<tr>
+  <td>涂贵香</td>
+  <td>
+    <div class="dropdown">
+      <button class="dropdown-button" onclick="toggleDropdown()">贵州大学</button>
+      <div id="dropdownContent" class="dropdown-content">
+      <a href="https://www.gzu.edu.cn/">大学官网</a>
+      <a href="https://rso.gzu.edu.cn/2024/0930/c17371a238255/page.htm">2024第一批录取分数线</a>
+      </div>
+    </div>/
+  <div class="dropdown">
+    <button class="dropdown-button" onclick="toggleDropdown()">遵义医科大学</button>
+    <div id="dropdownContent" class="dropdown-content">
+    <a href="https://www.zmu.edu.cn/">大学官网</a>
+    <a href="https://zyzb.zmu.edu.cn/Axzdoc2/%E8%B4%B5%E5%B7%9E/index_1.html">2024第一批录取分数线</a>
+    </div>
+  </div></td>
+  <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=重庆'>重庆</a></td>
+  <td >550+</td>
+  <td>-</td>
+  <td>白马长枪飘如诗，鲜衣怒马少年时</td>
+</tr>
+<tr>
+  <td>吴永琴</td>
+  <td>
+    <div class="dropdown">
+      <button class="dropdown-button" onclick="toggleDropdown()">南京大学</button>
+      <div id="dropdownContent" class="dropdown-content">
+      <a href='https://www.nju.edu.cn/'>大学官网</a>
+      <a href='https://bkzs.nju.edu.cn/static/front/nju/basic/html_web/lnfs.html'>2024第一批录取分数线</a>
+      </div>
+    </div>
+  </div></td>
+  <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=北京'>北京</a>/
+    <a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=南京'>南京</a>/
+    <a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=浙江'>浙江</a></td>
+  <td >600</td>
+  <td>-</td>
+  <td>尘埃岂能掩芳华，树叶迎风胜有声</td>
+</tr><tr>
+  <td>郑影</td>
+  <td>
+    <div class="dropdown">
+      <button class="dropdown-button" onclick="toggleDropdown()">贵州大学</button>
+      <div id="dropdownContent" class="dropdown-content">
+      <a href='https://www.gzu.edu.cn/'>大学官网</a>
+      <a href='https://rso.gzu.edu.cn/2024/0930/c17371a238255/page.htm'>2024第一批录取分数线</a>
+      </div>
+    </div>
+  </div></td>
+  <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=贵阳'>贵阳</a></td>
+  <td >520+</td>
+  <td>-</td>
+  <td>是什么让你一直坚持到现在？</td>
+</tr><tr>
+  <td>张应香</td>
+  <td>
+    <div class="dropdown">
+      <button class="dropdown-button" onclick="toggleDropdown()">深圳大学</button>
+      <div id="dropdownContent" class="dropdown-content">
+      <a href='https://www.szu.edu.cn/'>大学官网</a>
+      <a href='https://zs.szu.edu.cn/info/1153/2983.htm'>2024第一批录取分数线</a>
+      </div>
+    </div>
+  </div></td>
+  <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=南京'>南京</a></td>
+  <td >580+</td>
+  <td>-</td>
+  <td>抱怨不如改变</td>
+</tr><tr>
+  <td>李悦清华</td>
+  <td>
+    <div class="dropdown">
+      <button class="dropdown-button" onclick="toggleDropdown()">贵州大学</button>
+      <div id="dropdownContent" class="dropdown-content">
+      <a href='https://www.gzu.edu.cn/'>大学官网</a>
+      <a href='https://rso.gzu.edu.cn/2024/0930/c17371a238255/page.htm'>2024第一批录取分数线</a>
+      </div>
+    </div>
+  </div></td>
+  <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=北海'>北海</a></td>
+  <td >570+</td>
+  <td>-</td>
+  <td>耐心和恒心总会有收获</td>
+</tr><tr>
+  <td>杨文思</td>
+  <td>
+  <div class="dropdown">
+  <button class="dropdown-button" onclick="toggleDropdown()">贵州大学</button>
+  <div id="dropdownContent" class="dropdown-content">
+  <a href="https://www.gzu.edu.cn/">大学官网</a>
+  <a href="https://rso.gzu.edu.cn/2024/0930/c17371a238255/page.htm">2024第一批录取分数线</a>
+  </div>
+  </div>
+  </div></td>
+  <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=贵阳'>贵阳</a></td>
+  <td >550+</td>
+  <td>-</td>
+  <td>天生我材必有用，千金散尽还复来</td>
+  </tr>
+  <tr>
+    <td>卜方灿</td>
+    <td>
+    <div class="dropdown">
+    <button class="dropdown-button" onclick="toggleDropdown()">贵州大学</button>
+    <div id="dropdownContent" class="dropdown-content">
+    <a href="https://www.gzu.edu.cn/">大学官网</a>
+    <a href="https://rso.gzu.edu.cn/2024/0930/c17371a238255/page.htm">2024第一批录取分数线</a>
+    </div>
+    </div>
+    </div></td>
+    <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=遵义'>遵义</a></td>
+    <td >570+</td>
+    <td>-</td>
+    <td>没有失败的人，只有害怕失败的弱者</td>
+    </tr>
+    <tr>
+      <td>王必达</td>
+      <td>
+      <div class="dropdown">
+      <button class="dropdown-button" onclick="toggleDropdown()">贵州大学</button>
+      <div id="dropdownContent" class="dropdown-content">
+      <a href="https://www.gzu.edu.cn/">大学官网</a>
+      <a href="https://rso.gzu.edu.cn/2024/0930/c17371a238255/page.htm">2024第一批录取分数线</a>
+      </div>
+      </div>
+      </div></td>
+      <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=贵阳'>贵阳</a></td>
+      <td >550+</td>
+      <td>-</td>
+      <td>人生最清晰的脚印。往往印在最泥泞的路上</td>
+      </tr><tr>
+        <td>黄瑞</td>
+        <td>
+        <div class="dropdown">
+        <button class="dropdown-button" onclick="toggleDropdown()">中国人民公安大学</button>
+        <div id="dropdownContent" class="dropdown-content">
+        <a href="https://www.ppsuc.edu.cn/">大学官网</a>
+        <a >-</a>
+        </div>
+        </div>
+        </div></td>
+        <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=杭州'>杭州</a></td>
+        <td >560+</td>
+        <td>-</td>
+        <td>相信奇迹的人比奇迹更伟大，亦是奇迹本身</td>
+        </tr>
+        <tr>
+          <td>陈宝</td>
+          <td>
+          <div class="dropdown">
+          <button class="dropdown-button" onclick="toggleDropdown()">遵义医科大学</button>
+          <div id="dropdownContent" class="dropdown-content">
+          <a href="https://www.zmu.edu.cn/">大学官网</a>
+          <a href="https://zyzb.zmu.edu.cn/Axzdoc2/%E8%B4%B5%E5%B7%9E/index_1.html">2024第一批录取分数线</a>
+          </div>
+          </div>
+          </div></td>
+          <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=武汉'>武汉</a></td>
+          <td >550+</td>
+          <td>-</td>
+          <td>山穷水复疑无路，柳暗花明又一村</td>
+          </tr><tr>
+            <td>阮代勇</td>
+            <td>
+            <div class="dropdown">
+            <button class="dropdown-button" onclick="toggleDropdown()">上海交通大学</button>
+            <div id="dropdownContent" class="dropdown-content">
+            <a href="https://www.sjtu.edu.cn/">大学官网</a>
+            <a href="https://admissions.sjtu.edu.cn/newDetails?contentsID=3810000004015&name=%E5%8E%86%E5%B9%B4%E5%88%86%E6%95%B0&xid=3810000003720&pName=%E6%8A%A5%E8%80%83%E6%8C%87%E5%8D%97">2024第一批录取分数线</a>
+            </div>
+            </div>
+            </div></td>
+            <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=上海'>上海</a></td>
+            <td >600+</td>
+            <td>-</td>
+            <td>十年磨一剑，霜刃未曾试</td>
+            </tr><tr>
+              <td>王信杰</td>
+              <td>
+              <div class="dropdown">
+              <button class="dropdown-button" onclick="toggleDropdown()">贵州大学</button>
+              <div id="dropdownContent" class="dropdown-content">
+              <a href="https://www.gzu.edu.cn/">大学官网</a>
+              <a href="https://rso.gzu.edu.cn/2024/0930/c17371a238255/page.htm">2024第一批录取分数线</a>
+              </div>
+              </div>
+              </div></td>
+              <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=南京'>南京</a></td>
+              <td >580+</td>
+              <td>-</td>
+              <td>莫等闲，白了少年头</td>
+              </tr><tr>
+                <td>蔡云松</td>
+                <td>
+                <div class="dropdown">
+                <button class="dropdown-button" onclick="toggleDropdown()">贵州大学</button>
+                <div id="dropdownContent" class="dropdown-content">
+                <a href="https://www.gzu.edu.cn/">大学官网</a>
+                <a href="https://rso.gzu.edu.cn/2024/0930/c17371a238255/page.htm">2024第一批录取分数线</a>
+                </div>
+                </div>
+                </div></td>
+                <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=贵阳'>贵阳</a></td>
+                <td >550+</td>
+                <td>-</td>
+                <td>存在即合理</td>
+                </tr><tr>
+                  <td>胡昌发</td>
+                  <td>
+                  <div class="dropdown">
+                  <button class="dropdown-button" onclick="toggleDropdown()">贵州大学</button>
+                  <div id="dropdownContent" class="dropdown-content">
+                  <a href="https://www.gzu.edu.cn/">大学官网</a>
+                  <a href="https://rso.gzu.edu.cn/2024/0930/c17371a238255/page.htm">2024第一批录取分数线</a>
+                  </div>
+                  </div>
+                  </div></td>
+                  <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=贵阳'>贵阳</a></td>
+                  <td >550+</td>
+                  <td>-</td>
+                  <td>你不可能要求一个没有风暴的海洋，那不是海，是泥潭</td>
+                  </tr><tr>
+                    <td>邹伟</td>
+                    <td>
+                    <div class="dropdown">
+                    <button class="dropdown-button" onclick="toggleDropdown()">贵州大学</button>
+                    <div id="dropdownContent" class="dropdown-content">
+                    <a href="https://www.gzu.edu.cn/">大学官网</a>
+                    <a href="https://rso.gzu.edu.cn/2024/0930/c17371a238255/page.htm">2024第一批录取分数线</a>
+                    </div>
+                    </div>
+                    </div></td>
+                    <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=厦门'>厦门</a></td>
+                    <td >580+</td>
+                    <td>-</td>
+                    <td>不在沉默中爆发，就在沉默中灭亡</td>
+                    </tr><tr>
+                      <td>张银银</td>
+                      <td>
+                      <div class="dropdown">
+                      <button class="dropdown-button" onclick="toggleDropdown()">贵州大学</button>
+                      <div id="dropdownContent" class="dropdown-content">
+                      <a href="https://www.gzu.edu.cn/">大学官网</a>
+                      <a href="https://rso.gzu.edu.cn/2024/0930/c17371a238255/page.htm">2024第一批录取分数线</a>
+                      </div>
+                      </div>
+                      </div></td>
+                      <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=贵阳'>贵阳</a></td>
+                      <td >580+</td>
+                      <td>-</td>
+                      <td>考的全会，蒙的全对</td>
+                      </tr><tr>
+                        <td>向成万</td>
+                        <td>
+                        <div class="dropdown">
+                        <button class="dropdown-button" onclick="toggleDropdown()">武汉大学</button>
+                        <div id="dropdownContent" class="dropdown-content">
+                        <a href="https://www.whu.edu.cn/">大学官网</a>
+                        <a href="http://zsdata.whu.edu.cn/public/wzgl/#/fscx">2024第一批录取分数线</a>
+                        </div>
+                        </div>
+                        </div></td>
+                        <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=武汉'>武汉</a></td>
+                        <td >600+</td>
+                        <td>-</td>
+                        <td>自我提升是一个终生的过程</td>
+                        </tr><tr>
+                          <td>韦朝伟</td>
+                          <td>
+                          <div class="dropdown">
+                          <button class="dropdown-button" onclick="toggleDropdown()">贵州大学</button>
+                          <div id="dropdownContent" class="dropdown-content">
+                          <a href="https://www.gzu.edu.cn/">大学官网</a>
+                          <a href="https://rso.gzu.edu.cn/2024/0930/c17371a238255/page.htm">2024第一批录取分数线</a>
+                          </div>
+                          </div>
+                          </div></td>
+                          <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=贵阳'>贵阳</a></td>
+                          <td >580+</td>
+                          <td>-</td>
+                          <td>最慢的步伐不是跬步，而是徘徊</td>
+                          </tr><tr>
+                            <td>敖翔</td>
+                            <td>
+                            <div class="dropdown">
+                            <button class="dropdown-button" onclick="toggleDropdown()">南昌大学</button>
+                            <div id="dropdownContent" class="dropdown-content">
+                            <a href="https://www.ncu.edu.cn/">大学官网</a>
+                            <a href="http://zjc.ncu.edu.cn/zszx/lnfs/index.htm">2024第一批录取分数线</a>
+                            </div>
+                            </div>
+                            </div></td>
+                            <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=大理'>大理</a></td>
+                            <td >590+</td>
+                            <td>-</td>
+                            <td>卜卦三千，卦卦皆吉吉，天命在我</td>
+                            </tr><tr>
+                              <td>谢磊</td>
+                              <td>
+                              <div class="dropdown">
+                              <button class="dropdown-button" onclick="toggleDropdown()">武汉大学</button>
+                              <div id="dropdownContent" class="dropdown-content">
+                              <a href="https://www.whu.edu.cn/">大学官网</a>
+                              <a href="http://zsdata.whu.edu.cn/public/wzgl/#/fscx">2024第一批录取分数线</a>
+                              </div>
+                              </div>
+                              </div></td>
+                              <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=上海'>上海</a></td>
+                              <td >600</td>
+                              <td>-</td>
+                              <td>当你有机会做出选择的时候，不要让自己后悔</td>
+                              </tr>
+                              <tr>
+                                <td>李光海</td>
+                                <td>
+                                <div class="dropdown">
+                                <button class="dropdown-button" onclick="toggleDropdown()">中南大学</button>
+                                <div id="dropdownContent" class="dropdown-content">
+                                <a href="https://www.csu.edu.cn/">大学官网</a>
+                                <a href="https://zhaosheng.csu.edu.cn/bkzn/lnfs/a2023.htm">2024第一批录取分数线</a>
+                                </div>
+                                </div>
+                                </div></td>
+                                <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=贵阳'>贵阳</a></td>
+                                <td >550+</td>
+                                <td>-</td>
+                                <td>潜龙在渊</td>
+</tr>
+<tr>
+  <td>王景熠</td>
+  <td>
+  <div class="dropdown">
+  <button class="dropdown-button" onclick="toggleDropdown()">四川大学</button>
+  <div id="dropdownContent" class="dropdown-content">
+  <a href="https://www.scu.edu.cn/">大学官网</a>
+  <a href="https://zs.scu.edu.cn/list.jsp?urltype=tree.TreeTempUrl&wbtreeid=1105">2024第一批录取分数线</a>
+  </div>
+  </div>
+  </div></td>
+  <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=重庆'>重庆</a></td>
+  <td >530+</td>
+  <td>-</td>
+  <td>乾坤未定，你我皆是黑马；乾坤一定，我们扭转乾坤</td>
+  </tr>                             
+  <tr>
+   <td>杨胜康</td>
+    <td>
+    <div class="dropdown">
+    <button class="dropdown-button" onclick="toggleDropdown()">南京航空航天大学</button>
+    <div id="dropdownContent" class="dropdown-content">
+    <a href="https://www.nuaa.edu.cn/">大学官网</a>
+    <a href="https://zs.nuaa.edu.cn/lnlqfs/list.htm">2024第一批录取分数线</a>
+    </div>
+    </div>
+    </div></td>
+    <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=呼伦贝尔'>呼伦贝尔</a></td>
+    <td >600+</td>
+    <td>-</td>
+    <td>你只管努力，天意都无法掌控你</td>
+    </tr>
+    <tr>
+      <td>罗京</td>
+      <td>
+      <div class="dropdown">
+      <button class="dropdown-button" onclick="toggleDropdown()">中国人民公安大学</button>
+      <div id="dropdownContent" class="dropdown-content">
+      <a href="https://www.ppsuc.edu.cn/">大学官网</a>
+      <a >-</a>
+      </div>
+      </div>
+      </div></td>
+      <td><a>无</a></td>
+      <td >480+</td>
+      <td>-</td>
+      <td>上特控</td>
+      </tr>                            
+      <tr>
+        <td>梁天送</td>
+        <td>
+        <div class="dropdown">
+        <button class="dropdown-button" onclick="toggleDropdown()">武汉大学</button>
+        <div id="dropdownContent" class="dropdown-content">
+        <a href="https://www.whu.edu.cn/">大学官网</a>
+        <a href="http://zsdata.whu.edu.cn/public/wzgl/#/fscx">2024第一批录取分数线</a>
+        </div>
+        </div>
+        </div></td>
+        <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=北京'>北京</a></td>
+        <td >600+</td>
+        <td>-</td>
+        <td>学习没有捷径，唯有自律和坚持</td>
+        </tr>
+        <tr>
+          <td>杨厚超</td>
+          <td>
+          <div class="dropdown">
+          <button class="dropdown-button" onclick="toggleDropdown()">遵义医科大学</button>
+          <div id="dropdownContent" class="dropdown-content">
+          <a href="https://www.zmu.edu.cn/">大学官网</a>
+          <a href="https://zyzb.zmu.edu.cn/Axzdoc2/%E8%B4%B5%E5%B7%9E/index_1.html">2024第一批录取分数线</a>
+          </div>
+          </div>
+          </div></td>
+          <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=西安'>西安</a></td>
+          <td >526</td>
+          <td>-</td>
+          <td>人生就是一个不断与自己达成和解的过程</td>
+</tr>
+<tr>
+  <td>周铭</td>
+  <td>
+  <div class="dropdown">
+  <button class="dropdown-button" onclick="toggleDropdown()">贵州大学</button>
+  <div id="dropdownContent" class="dropdown-content">
+  <a href="https://www.gzu.edu.cn/">大学官网</a>
+  <a href="https://rso.gzu.edu.cn/2024/0930/c17371a238255/page.htm">2024第一批录取分数线</a>
+  </div>
+  
+  </div>/
+  <div class="dropdown">
+    <button class="dropdown-button" onclick="toggleDropdown()">郑州大学</button>
+    <div id="dropdownContent" class="dropdown-content">
+    <a>注：有可能无法访问</a>
+    <a href="https://www.zzu.edu.cn/">大学官网</a>
+    <a href="https://ao.zzu.edu.cn/xxgk/lnlq_/gz/a2024.htm">2024第一批录取分数线</a>
+    </div>
+    </div>
+  </div></td>
+  <td><a href='https://map.baidu.com/search/%E8%B4%B5%E9%98%B3%E5%B8%82/@11219464.995108543,3516933.635000019,7.76z?querytype=s&wd=贵阳'>贵阳</a></td>
+  <td >600</td>
+  <td>-</td>
+  <td>自助者，天助之</td>
+  </tr>
+         
+                
+
+  
+        </tbody>
+    </table>
+
+    <h1>理想，行动，坚持，超越</h1>
+    <p></p>
+</body>
+</div>
+</html>
